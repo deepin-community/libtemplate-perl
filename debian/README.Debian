@@ -1,0 +1,16 @@
+The authors of Template Toolkit have also created detailed
+documentation and examples written as TT2 libraries and source files
+which are built into HTML.
+
+You can find this documentation on the web here:
+
+http://template-toolkit.org/docs/index.html
+
+Downloadable version of documentation is available online here
+
+http://template-toolkit.org/download/#html_docs
+
+Be wary that this documentation is often out of date from the latest
+version of the library.
+
+ -- Benjamin Mako Hill <mako@debian.org>, Sat, 10 Mar 2018 16:39:18 -0800

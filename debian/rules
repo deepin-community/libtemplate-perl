@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+	
+override_dh_auto_configure:
+	[ ! -f $(CURDIR)/debian/Config.pm.backup.tmp ] && cp $(CURDIR)/lib/Template/Config.pm $(CURDIR)/debian/Config.pm.backup.tmp
+	dh_auto_configure
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f $(CURDIR)/.defaults.cfg
+	rm -f $(CURDIR)/t/test/src/divisionbyzero.ttc
+	rm -rf $(CURDIR)/t/test/tmp/cache/*
+	[ ! -f $(CURDIR)/debian/Config.pm.backup.tmp ] || mv -f $(CURDIR)/debian/Config.pm.backup.tmp $(CURDIR)/lib/Template/Config.pm
